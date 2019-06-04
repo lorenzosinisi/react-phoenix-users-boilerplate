@@ -11,8 +11,8 @@ cd appname
 
 #### Changing app name in files(commands for unix like systems)
 ```
-grep -rl Boilerplate | xargs sed -i s@Boilerplate@Appname@g
-grep --exclude={package.json,yarn.lock,.babelrc} -rl boilerplate | xargs sed -i s@boilerplate@appname@g
+grep -rl Boilerplate . | xargs sed -i '' 's/Boilerplate/Impari/g'
+grep --exclude={package.json,yarn.lock,.babelrc} -rl boilerplate . | xargs sed -i '' 's/boilerplate/impari/g'
 find . -depth -exec rename 's/boilerplate/appname/g' {} \; 
 ```
 
